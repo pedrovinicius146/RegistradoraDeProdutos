@@ -1,0 +1,20 @@
+<div class="container">
+<button (click)="mostrarRemedio()" class="btn btn-secondary">
+  {{ showProductList ? 'Ocultar Catálogo de Remedios' : 'Mostrar Catálogo de Remedios' }}
+</button>
+
+<div class="product-list">
+<div *ngIf="showProductList" class="centralizar">
+  <h3>   Catálogo de Remédios </h3>
+  <ul>
+    <div class="padding">
+      <ul class="list-group ">
+    <li *ngFor="let product of products" class="list-group-item">
+      {{ product.name }} - R$ {{ product.price }}
+    </li>
+  </ul>
+  </div>
+  </ul>
+</div>
+</div>
+</div>
